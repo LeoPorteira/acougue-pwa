@@ -2,6 +2,8 @@ export type ProductType = 'materia-prima' | 'corte' | 'processado'
 export type PaymentMethod = 'dinheiro' | 'cartao' | 'pix' | 'fiado'
 export type BreakReason = 'vencimento' | 'contaminacao' | 'erro-corte' | 'extravio' | 'outro'
 export type TransactionType = 'entrada' | 'saida'
+export type CarcassType = 'traseiro' | 'dianteiro' | 'carcaca-completa'
+export type CutTemplate = 'serrote' | 'normal'
 
 export interface Product {
   id?: number
@@ -37,6 +39,7 @@ export interface DebossaItem {
   productId: number
   productName: string
   weight: number
+  expectedWeight: number
   costPerKg: number
   totalCost: number
   suggestedPrice: number
@@ -45,6 +48,8 @@ export interface DebossaItem {
 export interface Debossa {
   id?: number
   date: Date
+  carcassType: CarcassType
+  cutTemplate: CutTemplate
   originProductId: number
   originProductName: string
   usedWeight: number
@@ -115,5 +120,24 @@ export interface Customer {
   name: string
   phone: string
   totalDebt: number
+  createdAt: Date
+}
+
+export interface StandardCut {
+  id?: number
+  name: string
+  carcassType: CarcassType
+  cutTemplate: CutTemplate
+  defaultPercentage: number
+  category: string
+  productId?: number
+}
+
+export interface CarcassTemplate {
+  id?: number
+  name: string
+  description: string
+  carcassType: CarcassType
+  cutTemplate: CutTemplate
   createdAt: Date
 }
