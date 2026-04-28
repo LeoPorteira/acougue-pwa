@@ -2,7 +2,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom'
 import {
   LayoutDashboard, Package, ShoppingCart, Scissors,
   Store, Wallet, AlertTriangle, BarChart3,
-  Truck, Users, Menu, X
+  Truck, Users, Menu, X, Beef
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -11,6 +11,7 @@ const navItems = [
   { to: '/products', icon: Package, label: 'Produtos' },
   { to: '/purchases', icon: ShoppingCart, label: 'Compras' },
   { to: '/debossa', icon: Scissors, label: 'Desossa' },
+  { to: '/standard-cuts', icon: Beef, label: 'Cortes Padrão' },
   { to: '/sales', icon: Store, label: 'Vendas' },
   { to: '/cashflow', icon: Wallet, label: 'Caixa' },
   { to: '/breaks', icon: AlertTriangle, label: 'Quebras' },
