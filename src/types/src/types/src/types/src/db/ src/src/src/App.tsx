@@ -11,6 +11,7 @@ import StockBreaks from './pages/StockBreaks'
 import Reports from './pages/Reports'
 import Suppliers from './pages/Suppliers'
 import Customers from './pages/Customers'
+import StandardCutsPage from './pages/StandardCuts'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="reports" element={<Reports />} />
           <Route path="suppliers" element={<Suppliers />} />
           <Route path="customers" element={<Customers />} />
+          <Route path="standard-cuts" element={<StandardCutsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
